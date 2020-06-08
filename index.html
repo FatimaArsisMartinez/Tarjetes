@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tarjetas_flexbox</title>
+        <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }  
+        html{
+                min-height: 100%;      
+        }
+        img{
+            width: 100%;      
+        }
+        body{
+            font-family: "georgia" cursive;
+            font-size:18px;
+            background:linear-gradient(38deg,white,purple);
+            color: black;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            padding: 2em 4em;
+            justify-content: center;
+            border-radius: 20px;
+            
+       }
+       .dissenyador{
+           width: 20em;
+           margin: 1em;
+           background; rgba(240,240,240,0.6);
+           display: flex;
+           border-radius:20px;
+           box-shadow: 0 0 20px black;
+           flex-direction: column;
+      }
+        .dissenyador_img{
+                border-radius: 20px 20px 0 0;
+                overflow:hidden;
+                width:100%;
+                height:200px;
+                background: purple;
+      }    
+            .dissenyador_img img{
+                border-radius: 20px 20px 0 0;
+                height: 100%;
+                object-fit:cover;
+                filter:grayscale(100%);
+                mix-blend-mode:lighten;
+                
+            }
+            .dissenyador:first-child .dissenyador_img img{
+                object-position: center;
+            }
+            .dissenyador:last-child .dissenyador_img img{
+                object-position: left;
+            }
+        header{
+            display: flex;
+            margin: 0.5em 1em;
+            justify-content: space-between;
+            border-bottom: 1px solid black;
+            align-items: baseline;
+                
+      }
+            h3{
+                font-style: italic;
+                font-weight: bold;
+            }
+            spam{
+                font-style: normal;
+                font-weight: lighter;
+                font-size: 0.9em;
+            }
+            footer{
+                font-style: italic;
+                background: darkorchid;
+                color: white;
+                font-size: italic;
+                border-radius: 0 0 20px 20px;
+                padding: 0.6em;
+            }
+            .dissenyador_contingut{
+                flex-grow: 1;
+                margin: 1em 1em 0.5em 1em;
+                font-size: 0.9em;
+                line-height: 1.4em;
+                text-align: justify;
+                hyphens: auto;
+            }
+        @media (max-width:600px){
+                body{
+                    font-size:16px;
+                }
+                .container{
+                    flex-direction:column; 
+                    
+                }
+            }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="dissenyador">
+        <div class="dissenyador_img">
+         <img src="img/paula-scher-john-madere-xl.jpg"
+         alt="Paula Scher">
+         </div>
+         <header>
+             <h3>Paula Scher</h3>
+             <spam>1948</spam>
+            </header>
+            <p class="dissenyador_contingut">
+                Paula Scher is one of the most influential graphic designers in the world. Described as the “master conjurer of the instantly familiar,” Scher straddles the line between pop culture and fine art.
+                Scher has been a partner in the New York office of Pentagram since 1991. She began her career as an art director in the 1970s and early 80s, when her eclectic approach to typography became highly influential. In the mid-1990s her landmark identity for The Public Theater fused high and low into a wholly new symbology for cultural institutions, and her recent architectural collaborations have re-imagined the urban landscape.
+
+
+            </p>
+            <footer class="disenyador_peu">
+                During the course of her career Scher has been the recipient of hundreds of industry honors and awards.
+            </footer>
+            </div>
+        <div class="dissenyador">
+            <div class="dissenyador_img">
+                <img src="img/stefan-sagmeister-john-madere-xl.jpg">
+            </div>
+            <header>
+                <h3>Stefan Sagmeister</h3>
+                <spam>1968</spam>
+            </header>
+            <p class="dissenyador_contingut">
+            Stefan Sagmeister is a renowned Austrian-born US based contemporary graphic designer and typographer. He is the co-founder of the famous design firm, Sagmeister & Walsh, which he established in partnership with Jessica Walsh. His intriguing and provocative designs redefined the status of graphic designers. Some of his notable designs are showcased on the album covers of The Rolling Stones, Pat Metheny, David Byrne and OK Go.
+            Stefan Sagmeister has promoted brands, music and entertained diverse range of clients such as the Guggenheim Museum, HBO, AIGA and Time Warner through his captivating designs.
+            </p>
+            <footer class="dissenyador_peu">
+               For his stellar achievements he was awarded the Grammy Award thrice and the National Design Award.
+               
+            </footer>
+            </div>
+        </div>
+    </body>
+</html>
